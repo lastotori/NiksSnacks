@@ -47,12 +47,6 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
-       .white-box {
-      background-color: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    }
     </style>
     <script>
         var selectedIngredients = {};
@@ -157,7 +151,7 @@ a:active {
 
             
             // Display the ingredients and amounts for the selected recipe
-            var ingredientsDisplay = document.getElementById("ingredientsContainer");
+            var ingredientsDisplay = document.getElementById("ingredients" + recipeNumber);
             var link = "<a href='" +recipeData[selectedRecipe].link[0]+ "' target='_blank'>Link</a><br>";
             var ingredientsHTML = "<strong>Recipe: </strong>"+link;
 
@@ -228,7 +222,6 @@ var selectedServings = document.getElementById("servings").value;
 
 <body style="background-color:#D8D6FF;">
 
-  <div id="ingredientsContainer" class="white-box"></div>
   <button style="position: absolute; left: 100px;border-radius: 10px;height:50px;width:150px" onclick="selectRandomRecipes1()">Select Random Recipes</button>
   <br><br><br>
  <label for="servings" style="width: 200px;">Servings:</label>
